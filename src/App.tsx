@@ -1,9 +1,6 @@
+import { AppRouter } from '.'
 function App() {
-  return (
-    <>
-      <h1>Initial application version</h1>
-    </>
-  )
+  return <AppRouter />
 }
 
 export default App
