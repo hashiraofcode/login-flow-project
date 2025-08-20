@@ -20,4 +20,5 @@ export interface FormProps {
   inputs: InputAtt[]
   button: ButtonAtt[]
   mensage?: mensage
+  isLoginForm?: boolean
 }

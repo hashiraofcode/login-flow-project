@@ -1,7 +1,14 @@
 import { FormContainer, Button, Inputs, MensageComponent } from '@/styles'
+import { RegistrationText } from '@/styles/registrationText'
 import type { FormProps } from '@/types/index'
+import { Link } from 'react-router-dom'
 
-export const FormComponent = ({ inputs, button, mensage }: FormProps) => {
+export const FormComponent = ({
+  inputs,
+  button,
+  mensage,
+  isLoginForm,
+}: FormProps) => {
   return (
     <FormContainer>
       {inputs.map((input, index) => {
@@ -20,6 +27,11 @@ export const FormComponent = ({ inputs, button, mensage }: FormProps) => {
           </Button>
         )
       })}
+      {isLoginForm && (
+        <RegistrationText>
+          Não tem conta? <Link to="/registration">Registre-se já</Link>
+        </RegistrationText>
+      )}
     </FormContainer>
   )
 }
